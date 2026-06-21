@@ -117,8 +117,10 @@
         <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">1</span>
-            <h2 id="act-dockerize-title" class="act__title" data-i18n="act.dockerize.title"></h2>
+            <div class="act__head">
+              <span class="act__index" aria-hidden="true">1</span>
+              <h2 id="act-dockerize-title" class="act__title" data-i18n="act.dockerize.title"></h2>
+            </div>
             <p class="act__lede" data-i18n="act.dockerize.lede"></p>
             <dl class="act__facts">
               <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.dockerize.how"></dd></div>
@@ -131,11 +133,7 @@
                 <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
                 <span class="mock__title" data-i18n="act.dockerize.mock_title"></span>
               </div>
-<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> docker compose up</span>
-<span class="ln"><span class="c-ok">✓</span> frontend   <span class="c-on">ready</span>   <span class="c-mut">localhost:5173</span></span>
-<span class="ln"><span class="c-ok">✓</span> api        <span class="c-on">ready</span>   <span class="c-mut">:8080</span></span>
-<span class="ln"><span class="c-ok">✓</span> kafka      <span class="c-on">ready</span>   <span class="c-mut">:9092</span></span>
-<span class="ln"><span class="c-ok">✓</span> producer   <span class="c-on">streaming</span></span></pre>
+<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> docker compose up</span><span class="ln"><span class="c-ok">✓</span> frontend   <span class="c-on">ready</span>   <span class="c-mut">localhost:5173</span></span><span class="ln"><span class="c-ok">✓</span> api        <span class="c-on">ready</span>   <span class="c-mut">:8080</span></span><span class="ln"><span class="c-ok">✓</span> kafka      <span class="c-on">ready</span>   <span class="c-mut">:9092</span></span><span class="ln"><span class="c-ok">✓</span> producer   <span class="c-on">streaming</span></span></pre>
             </div>
           </figure>
         </div>
@@ -146,8 +144,10 @@
         <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">2</span>
-            <h2 id="act-deploy-title" class="act__title" data-i18n="act.deploy.title"></h2>
+            <div class="act__head">
+              <span class="act__index" aria-hidden="true">2</span>
+              <h2 id="act-deploy-title" class="act__title" data-i18n="act.deploy.title"></h2>
+            </div>
             <p class="act__lede" data-i18n="act.deploy.lede"></p>
             <dl class="act__facts">
               <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.deploy.how"></dd></div>
@@ -160,13 +160,7 @@
                 <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
                 <span class="mock__title" data-i18n="act.deploy.mock_title"></span>
               </div>
-<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> fibe launch --name alice \</span>
-<span class="ln">    --compose @docker-compose.yml \</span>
-<span class="ln">    --marquee ubuntu-office \</span>
-<span class="ln">    --var VITE_API=https://alice-api.fibe.live \</span>
-<span class="ln">    --service frontend.subdomain=alice \</span>
-<span class="ln">    --service api.subdomain=alice-api \</span>
-<span class="ln">    --wait</span></pre>
+<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> fibe launch --name alice \</span><span class="ln">    --compose @docker-compose.yml \</span><span class="ln">    --marquee ubuntu-office \</span><span class="ln">    --var VITE_API=https://alice-api.fibe.live \</span><span class="ln">    --service frontend.subdomain=alice \</span><span class="ln">    --service api.subdomain=alice-api \</span><span class="ln">    --wait</span></pre>
             </div>
           </figure>
         </div>
@@ -177,8 +171,10 @@
         <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">3</span>
-            <h2 id="act-chat-title" class="act__title" data-i18n="act.chat.title"></h2>
+            <div class="act__head">
+              <span class="act__index" aria-hidden="true">3</span>
+              <h2 id="act-chat-title" class="act__title" data-i18n="act.chat.title"></h2>
+            </div>
             <p class="act__lede" data-i18n="act.chat.lede"></p>
             <dl class="act__facts">
               <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.chat.how"></dd></div>
