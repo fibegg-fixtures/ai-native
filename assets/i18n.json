@@ -1,0 +1,78 @@
+{
+  "en": {
+    "meta": {
+      "title": "Make your SDLC AI-native — in minutes · Fibe",
+      "description": "Develop locally, deploy live on Fibe with a single command, and give every teammate a Playground where AI agents build, verify, and ship. From a docker-compose to a live, AI-native workflow — in minutes, not months.",
+      "keywords": "Fibe, AI-native development, SDLC, docker compose, deploy, playgrounds, AI agents, CI/CD, live preview, developer platform",
+      "og_site_name": "Fibe",
+      "og_title": "Make your SDLC AI-native — in minutes",
+      "og_description": "Develop locally, deploy live with one command, and let AI agents build, verify, and ship on isolated Playgrounds. From docker-compose to a live, AI-native workflow.",
+      "twitter_title": "Make your SDLC AI-native — in minutes · Fibe",
+      "twitter_description": "From a local docker-compose to a live, AI-native workflow — develop, deploy, and delegate to agents on Fibe."
+    },
+    "a11y": {
+      "skip": "Skip to content",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
+    },
+    "nav": {
+      "try_fibe": "fibe →"
+    },
+    "hero": {
+      "title": "Make your SDLC AI-native — in minutes.",
+      "cta_details": "See details",
+      "video": {
+        "label": "Watch the full demo",
+        "aria": "Product demo: transforming an SDLC into AI-native workflows with Fibe"
+      }
+    },
+    "flow": {
+      "payoff": "From a docker-compose to a live, AI-native workflow. Minutes, not months."
+    },
+    "act": {
+      "label_how": "How",
+      "label_get": "You get",
+      "develop": {
+        "title": "Develop locally.",
+        "lede": "Bring your whole stack up and watch the app come to life — exactly as you work today.",
+        "how": "One command brings up the frontend, API, Kafka and a sample producer.",
+        "get": "The app live on localhost, hot-reloading on every save.",
+        "mock_title": "~/employee-of-the-month"
+      },
+      "deploy": {
+        "title": "Deploy live in one command.",
+        "lede": "What runs in Docker runs on Fibe — no rewrites, no new pipeline to learn.",
+        "how": "Add a few labels to your compose file, then one deploy command.",
+        "get": "A shareable live Playground, updated with every git push.",
+        "mock_title": "alice@fibe ~ deploy"
+      },
+      "delegate": {
+        "title": "Delegate to AI agents.",
+        "lede": "Describe a change in plain English; Fibe's agents do the rest.",
+        "how": "Ask in the bridge — agents read the code and edit your Playground.",
+        "get": "A reviewed pull request, verified on the live app.",
+        "mock_title": "fibe.gg/bridge"
+      }
+    },
+    "contact": {
+      "title": "Ready to go AI-native?",
+      "lede": "Spin up your first Playground free. Bring a docker-compose; leave with a live, AI-native workflow.",
+      "primary_label": "Start on Fibe",
+      "secondary_label": "Explore on GitHub"
+    },
+    "footer": {
+      "family": {
+        "fibe_gg": "fibe.gg",
+        "why": "why",
+        "where": "where",
+        "when": "when",
+        "whats": "whats",
+        "faq": "faq",
+        "blog": "blog"
+      },
+      "legal": { "terms": "Terms of Service", "privacy": "Privacy Policy" },
+      "support": "<strong>Support Ukraine.</strong>\n            <span class=\"footer__support-sub\">russia is a terrorist state.</span>",
+      "copyright": "© <span id=\"year\">2026</span> fibe.gg — All rights reserved."
+    }
+  }
+}

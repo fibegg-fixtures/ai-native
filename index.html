@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en" data-locale="en">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" >
+    <meta name="color-scheme" content="dark" >
+    <meta name="theme-color" content="#191c14" >
+
+    <title data-i18n="meta.title">Become AI-Native in 3 steps · Fibe</title>
+    <meta name="description" content="Develop locally, deploy live on Fibe with a single command, and give every teammate a Playground where AI agents build, verify, and ship. From a docker-compose to a live, AI-native workflow — in minutes, not months." data-i18n-attr="content=meta.description">
+    <meta name="author" content="Fibe" >
+    <meta name="robots" content="index, follow, max-image-preview:large" >
+    <meta name="keywords" content="Fibe, AI-native development, SDLC, docker compose, deploy, playgrounds, AI agents, CI/CD, live preview, developer platform" data-i18n-attr="content=meta.keywords">
+
+    <link rel="canonical" href="https://landing.fibe.gg/">
+    <link rel="icon" type="image/svg+xml" href="/fibe.svg" >
+    <link rel="alternate icon" href="/img/favicon.ico" sizes="any" >
+    <link rel="icon" type="image/png" href="/img/icon-192.png" sizes="192x192" >
+    <link rel="icon" type="image/png" href="/img/icon-512.png" sizes="512x512" >
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" >
+    <link rel="manifest" href="/site.webmanifest" >
+
+    <meta property="og:site_name" content="Fibe" data-i18n-attr="content=meta.og_site_name">
+    <meta property="og:type" content="website" >
+    <meta property="og:title" content="Make your SDLC AI-native — in minutes" data-i18n-attr="content=meta.og_title">
+    <meta property="og:description" content="Develop locally, deploy live with one command, and let AI agents build, verify, and ship on isolated Playgrounds. From docker-compose to a live, AI-native workflow." data-i18n-attr="content=meta.og_description">
+    <meta property="og:url" content="https://landing.fibe.gg/" >
+    <meta property="og:image" content="https://landing.fibe.gg/img/og-default.png" >
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:title" content="Make your SDLC AI-native — in minutes · Fibe" data-i18n-attr="content=meta.twitter_title">
+    <meta name="twitter:description" content="From a local docker-compose to a live, AI-native workflow — develop, deploy, and delegate to agents on Fibe." data-i18n-attr="content=meta.twitter_description">
+    <meta name="twitter:image" content="https://landing.fibe.gg/img/og-default.png" >
+
+    <!-- Type: Chakra Petch (display) · IBM Plex Sans (body) · JetBrains Mono (labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" >
+
+    <link rel="preload" href="/assets/style.css?v=1" as="style" >
+    <link rel="stylesheet" href="/assets/style.css?v=1" >
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <header class="nav" aria-label="Primary">
+      <div class="nav__inner">
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer" data-drawer-toggle data-i18n-attr="aria-label=a11y.open_menu">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <a class="nav__brand" href="/" aria-label="Fibe">
+          <img class="nav__mark" src="/fibe.svg" alt="" width="28" height="28" aria-hidden="true" >
+          <span class="nav__word">Fibe</span>
+        </a>
+
+        <nav class="nav__sections" aria-label="Sections">
+          <a class="nav__sec-link" href="#develop"><span class="nav__sec-num">1</span>Dockerize</a>
+          <a class="nav__sec-link" href="#deploy"><span class="nav__sec-num">2</span>Deploy</a>
+          <a class="nav__sec-link" href="#delegate"><span class="nav__sec-num">3</span>Chat</a>
+        </nav>
+
+        <a class="nav__cta" href="https://fibe.gg/" rel="noopener" data-i18n="nav.try_fibe">fibe →</a>
+      </div>
+    </header>
+
+    <!-- Mobile drawer (hidden on desktop). -->
+    <div class="drawer" id="nav-drawer" hidden data-drawer>
+      <div class="drawer__backdrop" data-drawer-close></div>
+      <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+        <div class="drawer__head">
+          <a class="nav__brand" href="/" aria-label="Fibe">
+            <img class="nav__mark" src="/fibe.svg" alt="" width="28" height="28" aria-hidden="true" >
+            <span class="nav__word">Fibe</span>
+          </a>
+          <button class="drawer__close" type="button" aria-label="Close menu" data-drawer-close data-i18n-attr="aria-label=a11y.close_menu">×</button>
+        </div>
+        <nav class="drawer__nav" aria-label="Sections">
+          <a class="drawer__link" href="#develop"><span class="drawer__num">01</span>Dockerize</a>
+          <a class="drawer__link" href="#deploy"><span class="drawer__num">02</span>Deploy</a>
+          <a class="drawer__link" href="#delegate"><span class="drawer__num">03</span>Chat</a>
+        </nav>
+        <a class="nav__cta drawer__cta" href="https://fibe.gg/" rel="noopener" data-i18n="nav.try_fibe">fibe →</a>
+      </aside>
+    </div>
+
+    <main id="main">
+      <!-- ── Hero ───────────────────────────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <h1 id="hero-title" class="hero__title" data-i18n="hero.title">Become AI-native in <span style="color: #eec854">3 steps</span></h1>
+
+          <!-- Demo video — Rumble embed fills the 16:9 screen. Swap the embed id in src. -->
+          <figure class="hero__video" data-i18n-attr="aria-label=hero.video.aria" aria-label="Product demo: transforming an SDLC into AI-native workflows with Fibe">
+            <span class="hero__video-screen">
+              <iframe class="hero__video-frame" src="https://rumble.com/embed/v79bcpq/?pub=4p9e2e" data-i18n-attr="title=hero.video.label" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; clipboard-write" allowfullscreen title="Watch the full demo"></iframe>
+            </span>
+          </figure>
+
+          <a class="btn btn--primary hero__cta" href="#develop">
+            <span data-i18n="hero.cta_details">See Those Steps</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── Three full-height act screens (01 / 02 / 03) ───────── -->
+      <!-- Act 01 — Develop -->
+      <section class="act" id="develop" aria-labelledby="act-develop-title">
+        <div class="act__inner">
+          <div class="act__copy">
+            <span class="act__index" aria-hidden="true">1</span>
+            <h2 id="act-develop-title" class="act__title" data-i18n="act.develop.title">Dockerize your app</h2>
+            <p class="act__lede" data-i18n="act.develop.lede">Ensure developers can run it locally. Most likely you already have it ready.</p>
+            <dl class="act__facts">
+              <div class="act__fact"><dt data-i18n="act.label_how">How</dt><dd data-i18n="act.develop.how">Create <code>docker-compose.yml</code></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">You get</dt><dd data-i18n="act.develop.get">Local environment works like production</dd></div>
+            </dl>
+          </div>
+          <figure class="act__visual">
+            <div class="mock mock--terminal">
+              <div class="mock__bar">
+                <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="mock__title" data-i18n="act.develop.mock_title">~/employee-of-the-month</span>
+              </div>
+<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> docker compose up</span><span class="ln"><span class="c-ok">✓</span> frontend   <span class="c-on">ready</span>   <span class="c-mut">localhost:5173</span></span><span class="ln"><span class="c-ok">✓</span> api        <span class="c-on">ready</span>   <span class="c-mut">:8080</span></span><span class="ln"><span class="c-ok">✓</span> kafka      <span class="c-on">ready</span>   <span class="c-mut">:9092</span></span><span class="ln"><span class="c-ok">✓</span> producer   <span class="c-on">streaming</span></span></pre>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Act 02 — Deploy (flipped) -->
+      <section class="act act--flip" id="deploy" aria-labelledby="act-deploy-title">
+        <div class="act__inner">
+          <div class="act__copy">
+            <span class="act__index" aria-hidden="true">2</span>
+            <h2 id="act-deploy-title" class="act__title" data-i18n="act.deploy.title">Deploy to Fibe</h2>
+            <p class="act__lede" data-i18n="act.deploy.lede">Runs in Docker — runs on Fibe.
+            <dl class="act__facts">
+              <div class="act__fact"><dt data-i18n="act.label_how">How</dt><dd data-i18n="act.deploy.how">Add a few labels to your <code>docker-compose.yml</code></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">You get</dt><dd data-i18n="act.deploy.get">Isolated environment with a URL, connected to git</dd></div>
+            </dl>
+          </div>
+          <figure class="act__visual">
+            <div class="mock mock--terminal">
+              <div class="mock__bar">
+                <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="mock__title" data-i18n="act.deploy.mock_title">alice@fibe ~ deploy</span>
+              </div>
+<pre class="mock__code" aria-hidden="true">
+  <span class="c-prompt">$ </span>fibe launch --name alice  \ </span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--compose @docker-compose.yml \</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--marquee ubuntu-office \</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--var VITE_API=https://alice-api.fibe.live \</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--service frontend.subdomain=alice \</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--service api.subdomain=alice-api \</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>--wait</span>
+
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Act 03 — Delegate -->
+      <section class="act" id="delegate" aria-labelledby="act-delegate-title">
+        <div class="act__inner">
+          <div class="act__copy">
+            <span class="act__index" aria-hidden="true">3</span>
+            <h2 id="act-delegate-title" class="act__title" data-i18n="act.delegate.title">Chat with your LLM</h2>
+            <p class="act__lede" data-i18n="act.delegate.lede">Start an agent of your choice. Describe changes naturally</p>
+            <dl class="act__facts">
+              <div class="act__fact"><dt data-i18n="act.label_how">How</dt><dd data-i18n="act.delegate.how">Chat from a mobile or a laptop</dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">You get</dt><dd data-i18n="act.delegate.get">Changes available immeidately on the URL</dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">Progress</dt><dd data-i18n="act.delegate.get">Stored on a personal/feature branch in git</dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">Results</dt><dd data-i18n="act.delegate.get">Improve with skill</dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get">Works For</dt><dd data-i18n="act.delegate.get">QA, Products, Experts, Developers, DevOps...</dd></div>
+            </dl>
+          </div>
+          <figure class="act__visual">
+            <div class="mock mock--browser">
+              <div class="mock__bar">
+                <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="mock__url" data-i18n="act.delegate.mock_title">fibe.gg/bridge</span>
+              </div>
+              <div class="mock__chat" aria-hidden="true">
+                <p class="chat chat--you"><span class="chat__who">you</span><span>Add a dark / light theme switcher</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>linking playground…</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>editing Header.tsx · theme.ts</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>verified on live playground (<code>alice</code>)</span></p>
+                <p class="chat chat--done"><span class="chat__who chat__tick">✓</span><span>opened PR #2402</span></p>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <section class="contact" aria-labelledby="contact-title">
+          <div class="contact__card">
+            <div class="contact__glow" aria-hidden="true"></div>
+            <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Ready to go AI-native?</h2>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="https://fibe.gg/" rel="noopener">
+                <span data-i18n="contact.primary_label">Start on Fibe</span>
+              </a>
+              <a class="btn btn--ghost" href="https://faq.fibe.gg" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="contact.secondary_label">See FAQ</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+
+
+
+      <!-- ── CTA card ───────────────────────────────────────────── -->
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer__inner">
+        <nav class="footer__family" aria-label="The Fibe family of sites">
+          <a class="footer__family-link" href="https://fibe.gg/" rel="noopener" data-i18n="footer.family.fibe_gg">fibe.gg</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://why.fibe.gg/" rel="noopener" data-i18n="footer.family.why">why</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://where.fibe.gg/" rel="noopener" data-i18n="footer.family.where">where</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://when.fibe.gg/" rel="noopener" data-i18n="footer.family.when">when</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://whats.fibe.gg/" rel="noopener" data-i18n="footer.family.whats">whats</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://faq.fibe.gg/" rel="noopener" data-i18n="footer.family.faq">faq</a>
+          <span class="footer__family-sep" aria-hidden="true">·</span>
+          <a class="footer__family-link" href="https://blog.fibe.gg/" rel="noopener" data-i18n="footer.family.blog">blog</a>
+        </nav>
+        <nav class="footer__social" aria-label="Fibe on social platforms">
+          <a class="footer__icon" href="https://fibegg.slack.com" target="_blank" rel="me noopener noreferrer" aria-label="Fibe on Slack" title="Slack">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52ZM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313ZM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834ZM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312ZM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834ZM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312ZM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52ZM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313Z"></path>
+            </svg>
+          </a>
+          <a class="footer__icon" href="https://buttondown.com/Fibe" target="_blank" rel="noopener noreferrer" aria-label="Fibe newsletter on Buttondown" title="Newsletter (Buttondown)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.236-8 4.764-8-4.764V6h16zm0 9.764H4V10.6l8 4.764 8-4.764z"></path>
+            </svg>
+          </a>
+          <a class="footer__icon" href="https://github.com/fibegg" target="_blank" rel="me noopener noreferrer" aria-label="Fibe on GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12Z"></path>
+            </svg>
+          </a>
+          <a class="footer__icon" href="https://rumble.com/user/fibegg" target="_blank" rel="me noopener noreferrer" aria-label="Fibe on Rumble" title="Rumble">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12.005 0C5.378 0 0 5.378 0 12.005 0 18.633 5.378 24 12.005 24 18.633 24 24 18.633 24 12.005 24 5.378 18.633 0 12.005 0Zm-1.36 6.295 6.4 3.71c1.226.71 1.226 2.46 0 3.17l-6.4 3.71c-1.23.715-2.77-.16-2.77-1.585V7.88c0-1.425 1.54-2.3 2.77-1.585Z"></path>
+            </svg>
+          </a>
+          <a class="footer__icon" href="https://yakihonne.com/profile/nprofile1qqs25g4up29vzql954hkr2nn582rl674p32kks43chvdwdzv9w2lq6sh8zynj" target="_blank" rel="me noopener noreferrer" aria-label="Fibe on Nostr · Yakihonne" title="Nostr · Yakihonne">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0Zm-2.43 6.18c2.05 0 3.7 1.65 3.7 3.7v.36h2.06c.65 0 1.18.53 1.18 1.18v6.6h-2v-6h-1.24v.76c0 1.05-.36 1.93-1.04 2.55-.68.62-1.55.94-2.6.94-.45 0-.86-.06-1.23-.18v2.13h-2V9.88c0-2.05 1.65-3.7 3.17-3.7Zm.02 2c-.92 0-1.67.74-1.67 1.66v3.34c.37.27.84.43 1.43.43.58 0 1.05-.16 1.4-.46.34-.3.51-.7.51-1.2v-2.1c0-.92-.75-1.67-1.67-1.67Z"></path>
+            </svg>
+          </a>
+          <a class="footer__icon" href="mailto:support@fibe.gg" rel="noopener" aria-label="Email Fibe support" title="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.73 0 3.41-.43 4.89-1.24l-.74-1.36c-1.27.69-2.69 1.05-4.15 1.05-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8v.86c0 .69-.62 1.39-1.31 1.39-.69 0-1.19-.7-1.19-1.39V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.5V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+            </svg>
+          </a>
+        </nav>
+        <div class="footer__support" role="note">
+          <span class="flag" aria-hidden="true">🇺🇦</span>
+          <span class="footer__support-text" data-i18n="footer.support"><strong>Support Ukraine.</strong>
+            <span class="footer__support-sub">russia is a terrorist state.</span></span>
+        </div>
+        <nav class="footer__legal" aria-label="Legal">
+          <a class="footer__legal-link" href="https://tos.fibe.gg/" rel="noopener" data-i18n="footer.legal.terms">Terms of Service</a>
+          <span class="footer__legal-sep" aria-hidden="true">·</span>
+          <a class="footer__legal-link" href="https://privacy.fibe.gg/" rel="noopener" data-i18n="footer.legal.privacy">Privacy Policy</a>
+        </nav>
+        <div class="footer__copy" data-i18n="footer.copyright">© <span id="year">2026</span> fibe.gg — All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="/assets/script.js?v=1" defer></script>
+    <script>
+      (() => {
+        const host = location.hostname;
+        if (host !== "localhost" && host !== "127.0.0.1") return;
+        if (!location.port) return;
+        const port = parseInt(location.port, 10) + 1;
+        try {
+          const es = new EventSource(`http://${host}:${port}/__reload`);
+          es.addEventListener("reload", () => location.reload());
+        } catch {}
+      })();
+    </script>
+  </body>
+</html>
