@@ -1,21 +1,16 @@
 #!/usr/bin/env node
-// Local dev server with auto-rebuild + hot-reload.
+// Local dev server with hot-reload.
 //
 //   npm run dev
 //
-// What it does:
+// index.html is the source of truth (no build step). What this does:
 //   1. Spawns `python3 -m http.server <PORT>` in the project root.
-//   2. Runs an initial `build-locales` so /index.html exists.
-//   3. Watches the source files:
-//        - template.html        ← triggers rebuild + reload
-//        - assets/i18n.json     ← triggers rebuild + reload
-//        - assets/script.js     ← reload only
-//        - assets/style.css     ← reload only
-//      (debounced ~80 ms).
-//   4. Runs a tiny SSE server on PORT+1; the inline hot-reload script in
-//      template.html subscribes to it and refreshes the page on each event.
+//   2. Runs a tiny SSE server on PORT+1; the inline hot-reload script in
+//      index.html subscribes to it and refreshes the page on each event.
 //      The client script no-ops on non-localhost hosts, so production HTML
 //      is unaffected.
+//   3. Watches index.html + assets/style.css + assets/script.js and reloads
+//      open tabs on any edit (debounced ~80 ms).
 
 import { spawn } from "child_process";
 import http from "http";
@@ -40,50 +35,7 @@ server.on("error", (err) => {
 });
 console.log(`▶ http://localhost:${PORT}`);
 
-// ─── 2. Build runner (with in-flight coalescing) ──────────────────────────
-let inflight = null;
-let queued = false;
-
-const runBuildOnce = () =>
-  new Promise((resolve, reject) => {
-    const t = Date.now();
-    const proc = spawn(
-      process.execPath,
-      [path.join(ROOT, "scripts/build-locales.mjs")],
-      { cwd: ROOT, stdio: ["ignore", "inherit", "inherit"] }
-    );
-    proc.on("exit", (code) => {
-      if (code === 0) {
-        console.log(`  (built in ${Date.now() - t} ms)\n`);
-        resolve();
-      } else {
-        console.error(`✗ build failed (exit ${code})\n`);
-        // Don't reject — keep dev running so the next edit gets a chance.
-        resolve();
-      }
-    });
-    proc.on("error", reject);
-  });
-
-const runBuild = async () => {
-  if (inflight) {
-    queued = true;
-    return;
-  }
-  inflight = runBuildOnce();
-  await inflight;
-  inflight = null;
-  if (queued) {
-    queued = false;
-    // A change came in mid-build — run again to catch it.
-    setTimeout(runBuild, 50);
-  }
-};
-
-// Initial build so the first request hits real files.
-await runBuild();
-
-// ─── 3. SSE server: broadcasts "reload" events to the in-page script ──────
+// ─── 2. SSE server: broadcasts "reload" events to the in-page script ──────
 const sseClients = new Set();
 
 const sseServer = http.createServer((req, res) => {
@@ -117,44 +69,38 @@ sseServer.listen(SSE_PORT, "127.0.0.1", () => {
 
 const notifyReload = () => {
   if (!sseClients.size) return;
-  const msg = `event: reload\ndata: ${Date.now()}\n\n`;
+  const msg = `event: reload\ndata: reload\n\n`;
   for (const res of sseClients) {
     try { res.write(msg); } catch {}
   }
 };
 
-// ─── 4. Watcher (debounced) ───────────────────────────────────────────────
+// ─── 3. Watcher (debounced) ───────────────────────────────────────────────
 // We watch the *parent directory* of each source so atomic-rename saves
 // (the way most editors save) don't break the watcher's file handle.
 const SOURCES = [
-  { dir: ROOT, file: "template.html",  rebuild: true  },
-  { dir: path.join(ROOT, "assets"), file: "i18n.json", rebuild: true  },
-  { dir: path.join(ROOT, "assets"), file: "script.js", rebuild: false },
-  { dir: path.join(ROOT, "assets"), file: "style.css", rebuild: false },
+  { dir: ROOT, file: "index.html" },
+  { dir: path.join(ROOT, "assets"), file: "style.css" },
+  { dir: path.join(ROOT, "assets"), file: "script.js" },
 ];
 
 const pendingFiles = new Set();
-let pendingNeedsBuild = false;
 let debounce = 0;
 
-const flush = async () => {
+const flush = () => {
   const files = [...pendingFiles];
-  const needsBuild = pendingNeedsBuild;
   pendingFiles.clear();
-  pendingNeedsBuild = false;
   const stamp = new Date().toLocaleTimeString();
-  console.log(`↻ ${stamp} — ${files.join(", ")} changed${needsBuild ? ", rebuilding…" : ""}`);
-  if (needsBuild) await runBuild();
+  console.log(`↻ ${stamp} — ${files.join(", ")} changed`);
   notifyReload();
   if (sseClients.size) console.log(`  → reloaded ${sseClients.size} tab${sseClients.size === 1 ? "" : "s"}`);
 };
 
-for (const { dir, file, rebuild } of SOURCES) {
+for (const { dir, file } of SOURCES) {
   try {
     fs.watch(dir, (_event, name) => {
       if (name !== file) return;
       pendingFiles.add(file);
-      if (rebuild) pendingNeedsBuild = true;
       clearTimeout(debounce);
       debounce = setTimeout(flush, 80);
     });
@@ -168,7 +114,7 @@ console.log(
   ).join(", ")}\n`
 );
 
-// ─── 5. Clean shutdown ────────────────────────────────────────────────────
+// ─── 4. Clean shutdown ────────────────────────────────────────────────────
 const shutdown = (signal) => {
   console.log(`\n${signal} → stopping…`);
   for (const res of sseClients) {

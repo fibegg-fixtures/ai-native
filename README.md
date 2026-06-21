@@ -6,51 +6,35 @@ A tiny, static single-page **marketing landing** for Fibe — the message of the
 LLM to ship changes._ Part of the why / whats / faq / when family, sharing its
 **"Phoenix Terminal"** palette and type system.
 
-## How it works
+## Source of truth
 
-The page is **generated** from two sources of truth:
-
-| Source             | Role                                              |
-| ------------------ | ------------------------------------------------- |
-| `template.html`    | Structure only — text-less `[data-i18n]` markers  |
-| `assets/i18n.json` | All copy, per locale (`en`)                        |
-
-`scripts/build-locales.mjs` fills the template per locale and writes:
-
-- `index.html` — default locale (`en`), at the root
+`index.html` is **hand-authored** and is the single source of truth — there is
+no build step. Edit it directly. `assets/style.css` holds the styling (shared
+Phoenix Terminal system) and `assets/script.js` the behavior (mobile drawer,
+footer year, scroll-spy).
 
 ## Develop
 
 ```bash
-npm install
 npm run dev          # http://localhost:5183
 ```
 
-`npm run dev` serves the folder, rebuilds on changes to `template.html` /
-`assets/i18n.json`, and hot-reloads the browser on any edit.
-
-## Edit copy
-
-Edit `assets/i18n.json`, then:
-
-```bash
-npm run build:locales
-```
+`npm run dev` serves the folder and hot-reloads open tabs when you edit
+`index.html`, `assets/style.css`, or `assets/script.js`. (No dependencies — it
+shells out to `python3 -m http.server`.)
 
 ## Sections
 
-- **Hero** — the headline ("Become AI-native in 3 steps") + demo video + CTA.
-- **1 · Dockerize** — `docker-compose.yml`, runs locally like production.
-- **2 · Deploy** — a few compose labels + one command → an isolated live URL.
-- **3 · Chat** — describe changes to your LLM; it ships to the playground / PR.
-- **CTA card** — "Ready to go AI-native?" → fibe.gg / FAQ.
+- **Hero** — the headline ("Become AI-native in 3 steps") + demo video + "Step One" CTA.
+- **1 · Dockerize** — `docker-compose.yml`, runs locally like production → "Step Two".
+- **2 · Deploy** — a few compose labels + one command → an isolated live URL → "Final Step".
+- **3 · Chat** — describe changes to your LLM; closes with Start on Fibe / See FAQ.
 - Shared header + footer (Fibe family links, social, support Ukraine, legal).
 
-Styling lives in `assets/style.css` (shared Phoenix Terminal system); behavior
-(mobile drawer, footer year, scroll-spy) in `assets/script.js`.
+Each act has a faint Phoenix-Terminal watermark: `docker.svg` whale (Dockerize),
+the phoenix raster (Deploy), `LLM.svg` neural net (Chat).
 
 ## Deploy
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the
-locales and publishes to **GitHub Pages** at `ai-native.fibe.gg` (custom domain
-set via `CNAME`).
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which publishes the
+repo as-is to **GitHub Pages** at `ai-native.fibe.gg` (custom domain via `CNAME`).
