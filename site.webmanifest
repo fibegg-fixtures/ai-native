@@ -1,7 +1,7 @@
 {
   "name": "Fibe — AI-native development",
   "short_name": "Fibe",
-  "description": "Develop locally, deploy live with one command, and let AI agents build, verify, and ship on isolated Playgrounds. Make your SDLC AI-native — in minutes.",
+  "description": "Become AI-native in 3 steps: dockerize your app, deploy to Fibe in one command, then chat with your LLM to ship changes.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Neural network">
+  <!-- Connections (input → hidden → output), drawn faint for depth -->
+  <g stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5">
+    <!-- input I1(96,136) → hidden -->
+    <line x1="96" y1="136" x2="256" y2="110"/>
+    <line x1="96" y1="136" x2="256" y2="207"/>
+    <line x1="96" y1="136" x2="256" y2="305"/>
+    <line x1="96" y1="136" x2="256" y2="402"/>
+    <!-- input I2(96,256) → hidden -->
+    <line x1="96" y1="256" x2="256" y2="110"/>
+    <line x1="96" y1="256" x2="256" y2="207"/>
+    <line x1="96" y1="256" x2="256" y2="305"/>
+    <line x1="96" y1="256" x2="256" y2="402"/>
+    <!-- input I3(96,376) → hidden -->
+    <line x1="96" y1="376" x2="256" y2="110"/>
+    <line x1="96" y1="376" x2="256" y2="207"/>
+    <line x1="96" y1="376" x2="256" y2="305"/>
+    <line x1="96" y1="376" x2="256" y2="402"/>
+    <!-- hidden → output O1(416,176) / O2(416,336) -->
+    <line x1="256" y1="110" x2="416" y2="176"/>
+    <line x1="256" y1="110" x2="416" y2="336"/>
+    <line x1="256" y1="207" x2="416" y2="176"/>
+    <line x1="256" y1="207" x2="416" y2="336"/>
+    <line x1="256" y1="305" x2="416" y2="176"/>
+    <line x1="256" y1="305" x2="416" y2="336"/>
+    <line x1="256" y1="402" x2="416" y2="176"/>
+    <line x1="256" y1="402" x2="416" y2="336"/>
+  </g>
+  <!-- Nodes -->
+  <g fill="#000000">
+    <circle cx="96" cy="136" r="26"/>
+    <circle cx="96" cy="256" r="26"/>
+    <circle cx="96" cy="376" r="26"/>
+    <circle cx="256" cy="110" r="22"/>
+    <circle cx="256" cy="207" r="22"/>
+    <circle cx="256" cy="305" r="22"/>
+    <circle cx="256" cy="402" r="22"/>
+    <circle cx="416" cy="176" r="26"/>
+    <circle cx="416" cy="336" r="26"/>
+  </g>
+</svg>

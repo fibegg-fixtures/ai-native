@@ -1,14 +1,14 @@
 {
   "en": {
     "meta": {
-      "title": "Make your SDLC AI-native — in minutes · Fibe",
-      "description": "Develop locally, deploy live on Fibe with a single command, and give every teammate a Playground where AI agents build, verify, and ship. From a docker-compose to a live, AI-native workflow — in minutes, not months.",
-      "keywords": "Fibe, AI-native development, SDLC, docker compose, deploy, playgrounds, AI agents, CI/CD, live preview, developer platform",
+      "title": "Become AI-Native in 3 steps · Fibe",
+      "description": "Become AI-native in 3 steps: dockerize your app, deploy to Fibe in one command, then chat with your LLM to ship changes. From a docker-compose to a live, AI-native workflow — in minutes, not months.",
+      "keywords": "Fibe, AI-native development, SDLC, docker compose, deploy, playgrounds, AI agents, chat, LLM, CI/CD, live preview, developer platform",
       "og_site_name": "Fibe",
-      "og_title": "Make your SDLC AI-native — in minutes",
-      "og_description": "Develop locally, deploy live with one command, and let AI agents build, verify, and ship on isolated Playgrounds. From docker-compose to a live, AI-native workflow.",
-      "twitter_title": "Make your SDLC AI-native — in minutes · Fibe",
-      "twitter_description": "From a local docker-compose to a live, AI-native workflow — develop, deploy, and delegate to agents on Fibe."
+      "og_title": "Become AI-native in 3 steps",
+      "og_description": "Dockerize your app, deploy to Fibe in one command, then chat with your LLM to ship changes — from a docker-compose to a live, AI-native workflow.",
+      "twitter_title": "Become AI-Native in 3 steps · Fibe",
+      "twitter_description": "Dockerize, deploy to Fibe, and chat with your LLM — from a local docker-compose to a live, AI-native workflow."
     },
     "a11y": {
       "skip": "Skip to content",
@@ -19,46 +19,48 @@
       "try_fibe": "fibe →"
     },
     "hero": {
-      "title": "Make your SDLC AI-native — in minutes.",
-      "cta_details": "See details",
+      "title": "Become AI-native in <span style=\"color: #eec854\">3 steps</span>",
+      "cta_details": "See Those Steps",
       "video": {
         "label": "Watch the full demo",
         "aria": "Product demo: transforming an SDLC into AI-native workflows with Fibe"
       }
     },
-    "flow": {
-      "payoff": "From a docker-compose to a live, AI-native workflow. Minutes, not months."
-    },
     "act": {
       "label_how": "How",
       "label_get": "You get",
-      "develop": {
-        "title": "Develop locally.",
-        "lede": "Bring your whole stack up and watch the app come to life — exactly as you work today.",
-        "how": "One command brings up the frontend, API, Kafka and a sample producer.",
-        "get": "The app live on localhost, hot-reloading on every save.",
+      "label_progress": "Progress",
+      "label_results": "Results",
+      "label_works": "Works For",
+      "dockerize": {
+        "title": "Dockerize your app",
+        "lede": "Ensure developers can run it locally. Most likely you already have it ready.",
+        "how": "Create <code>docker-compose.yml</code>",
+        "get": "Local environment works like production",
         "mock_title": "~/employee-of-the-month"
       },
       "deploy": {
-        "title": "Deploy live in one command.",
-        "lede": "What runs in Docker runs on Fibe — no rewrites, no new pipeline to learn.",
-        "how": "Add a few labels to your compose file, then one deploy command.",
-        "get": "A shareable live Playground, updated with every git push.",
+        "title": "Deploy to Fibe",
+        "lede": "Runs in Docker — runs on Fibe.",
+        "how": "Add a few labels to your <code>docker-compose.yml</code>",
+        "get": "Isolated environment with a URL, connected to git",
         "mock_title": "alice@fibe ~ deploy"
       },
-      "delegate": {
-        "title": "Delegate to AI agents.",
-        "lede": "Describe a change in plain English; Fibe's agents do the rest.",
-        "how": "Ask in the bridge — agents read the code and edit your Playground.",
-        "get": "A reviewed pull request, verified on the live app.",
+      "chat": {
+        "title": "Chat with your LLM",
+        "lede": "Start an agent of your choice. Describe changes naturally.",
+        "how": "Chat from a mobile or a laptop",
+        "get": "Changes available immediately on the URL",
+        "progress": "Stored on a personal/feature branch in git",
+        "results": "Improve with skill",
+        "works": "QA, Products, Experts, Developers, DevOps…",
         "mock_title": "fibe.gg/bridge"
       }
     },
     "contact": {
       "title": "Ready to go AI-native?",
-      "lede": "Spin up your first Playground free. Bring a docker-compose; leave with a live, AI-native workflow.",
       "primary_label": "Start on Fibe",
-      "secondary_label": "Explore on GitHub"
+      "secondary_label": "See FAQ"
     },
     "footer": {
       "family": {

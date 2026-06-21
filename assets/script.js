@@ -1,12 +1,9 @@
 /*
- * faq.fibe.gg — page behavior
+ * ai-native.fibe.gg — page behavior
  *
  *   1. Stamp the current year in the footer.
  *   2. Mobile drawer: open/close + ESC + click-outside.
- *   3. Query terminals: each FAQ types its question ($ …) as it scrolls into
- *      view, then an "Ask" button on the > _ prompt types out the answer.
- *      Progressive enhancement over the markdown-built content — with JS off,
- *      questions and answers are simply shown (see .qterm CSS fallback).
+ *   3. Active-section highlight (scroll-spy) for the nav step links.
  */
 
 (() => {

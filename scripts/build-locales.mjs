@@ -21,7 +21,7 @@ const TEMPLATE_PATH = path.join(ROOT, "template.html");
 const I18N_PATH = path.join(ROOT, "assets/i18n.json");
 
 const DEFAULT_LOCALE = "en";
-const SITE_ORIGIN = "https://landing.fibe.gg";
+const SITE_ORIGIN = "https://ai-native.fibe.gg";
 
 const lookup = (dict, dottedKey) => {
   let cur = dict;

@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large" >
     <meta name="keywords" content="" data-i18n-attr="content=meta.keywords">
 
-    <link rel="canonical" href="https://landing.fibe.gg/" >
+    <link rel="canonical" href="https://ai-native.fibe.gg/" >
     <link rel="icon" type="image/svg+xml" href="/fibe.svg" >
     <link rel="alternate icon" href="/img/favicon.ico" sizes="any" >
     <link rel="icon" type="image/png" href="/img/icon-192.png" sizes="192x192" >
@@ -24,12 +24,12 @@
     <meta property="og:type" content="website" >
     <meta property="og:title" content="" data-i18n-attr="content=meta.og_title">
     <meta property="og:description" content="" data-i18n-attr="content=meta.og_description">
-    <meta property="og:url" content="https://landing.fibe.gg/" >
-    <meta property="og:image" content="https://landing.fibe.gg/img/og-default.png" >
+    <meta property="og:url" content="https://ai-native.fibe.gg/" >
+    <meta property="og:image" content="https://ai-native.fibe.gg/img/og-default.png" >
     <meta name="twitter:card" content="summary_large_image" >
     <meta name="twitter:title" content="" data-i18n-attr="content=meta.twitter_title">
     <meta name="twitter:description" content="" data-i18n-attr="content=meta.twitter_description">
-    <meta name="twitter:image" content="https://landing.fibe.gg/img/og-default.png" >
+    <meta name="twitter:image" content="https://ai-native.fibe.gg/img/og-default.png" >
 
     <!-- Type: Chakra Petch (display) · IBM Plex Sans (body) · JetBrains Mono (labels) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" >
@@ -57,9 +57,9 @@
         </a>
 
         <nav class="nav__sections" aria-label="Sections">
-          <a class="nav__sec-link" href="#develop"><span class="nav__sec-num">01</span>Develop</a>
-          <a class="nav__sec-link" href="#deploy"><span class="nav__sec-num">02</span>Deploy</a>
-          <a class="nav__sec-link" href="#delegate"><span class="nav__sec-num">03</span>Delegate</a>
+          <a class="nav__sec-link" href="#dockerize"><span class="nav__sec-num">1</span>Dockerize</a>
+          <a class="nav__sec-link" href="#deploy"><span class="nav__sec-num">2</span>Deploy</a>
+          <a class="nav__sec-link" href="#chat"><span class="nav__sec-num">3</span>Chat</a>
         </nav>
 
         <a class="nav__cta" href="https://fibe.gg/" rel="noopener" data-i18n="nav.try_fibe"></a>
@@ -78,9 +78,9 @@
           <button class="drawer__close" type="button" aria-label="Close menu" data-drawer-close data-i18n-attr="aria-label=a11y.close_menu">×</button>
         </div>
         <nav class="drawer__nav" aria-label="Sections">
-          <a class="drawer__link" href="#develop"><span class="drawer__num">01</span>Develop</a>
+          <a class="drawer__link" href="#dockerize"><span class="drawer__num">01</span>Dockerize</a>
           <a class="drawer__link" href="#deploy"><span class="drawer__num">02</span>Deploy</a>
-          <a class="drawer__link" href="#delegate"><span class="drawer__num">03</span>Delegate</a>
+          <a class="drawer__link" href="#chat"><span class="drawer__num">03</span>Chat</a>
         </nav>
         <a class="nav__cta drawer__cta" href="https://fibe.gg/" rel="noopener" data-i18n="nav.try_fibe"></a>
       </aside>
@@ -105,31 +105,31 @@
             </span>
           </figure>
 
-          <a class="btn btn--primary hero__cta" href="#develop">
+          <a class="btn btn--primary hero__cta" href="#dockerize">
             <span data-i18n="hero.cta_details"></span>
-            <span class="hero__cta-arrow" aria-hidden="true">↓</span>
           </a>
         </div>
       </section>
 
-      <!-- ── Three full-height act screens (01 / 02 / 03) ───────── -->
-      <!-- Act 01 — Develop -->
-      <section class="act" id="develop" aria-labelledby="act-develop-title">
+      <!-- ── Three full-height act screens (1 / 2 / 3) ──────────── -->
+      <!-- Act 1 — Dockerize -->
+      <section class="act" id="dockerize" aria-labelledby="act-dockerize-title">
+        <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">01</span>
-            <h2 id="act-develop-title" class="act__title" data-i18n="act.develop.title"></h2>
-            <p class="act__lede" data-i18n="act.develop.lede"></p>
+            <span class="act__index" aria-hidden="true">1</span>
+            <h2 id="act-dockerize-title" class="act__title" data-i18n="act.dockerize.title"></h2>
+            <p class="act__lede" data-i18n="act.dockerize.lede"></p>
             <dl class="act__facts">
-              <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.develop.how"></dd></div>
-              <div class="act__fact"><dt data-i18n="act.label_get"></dt><dd data-i18n="act.develop.get"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.dockerize.how"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get"></dt><dd data-i18n="act.dockerize.get"></dd></div>
             </dl>
           </div>
           <figure class="act__visual">
             <div class="mock mock--terminal">
               <div class="mock__bar">
                 <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span class="mock__title" data-i18n="act.develop.mock_title"></span>
+                <span class="mock__title" data-i18n="act.dockerize.mock_title"></span>
               </div>
 <pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> docker compose up</span>
 <span class="ln"><span class="c-ok">✓</span> frontend   <span class="c-on">ready</span>   <span class="c-mut">localhost:5173</span></span>
@@ -141,11 +141,12 @@
         </div>
       </section>
 
-      <!-- Act 02 — Deploy (flipped) -->
+      <!-- Act 2 — Deploy (flipped) -->
       <section class="act act--flip" id="deploy" aria-labelledby="act-deploy-title">
+        <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">02</span>
+            <span class="act__index" aria-hidden="true">2</span>
             <h2 id="act-deploy-title" class="act__title" data-i18n="act.deploy.title"></h2>
             <p class="act__lede" data-i18n="act.deploy.lede"></p>
             <dl class="act__facts">
@@ -159,65 +160,66 @@
                 <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
                 <span class="mock__title" data-i18n="act.deploy.mock_title"></span>
               </div>
-<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> fibe deploy</span>
-<span class="ln"><span class="c-arrow">→</span> packaging compose</span>
-<span class="ln"><span class="c-arrow">→</span> provisioning playground</span>
-<span class="ln"><span class="c-ok">✓</span> <span class="c-live">live</span> · <span class="c-url">alice.fibe.live</span></span></pre>
+<pre class="mock__code" aria-hidden="true"><span class="ln"><span class="c-prompt">$</span> fibe launch --name alice \</span>
+<span class="ln">    --compose @docker-compose.yml \</span>
+<span class="ln">    --marquee ubuntu-office \</span>
+<span class="ln">    --var VITE_API=https://alice-api.fibe.live \</span>
+<span class="ln">    --service frontend.subdomain=alice \</span>
+<span class="ln">    --service api.subdomain=alice-api \</span>
+<span class="ln">    --wait</span></pre>
             </div>
           </figure>
         </div>
       </section>
 
-      <!-- Act 03 — Delegate -->
-      <section class="act" id="delegate" aria-labelledby="act-delegate-title">
+      <!-- Act 3 — Chat -->
+      <section class="act" id="chat" aria-labelledby="act-chat-title">
+        <div class="act__bg" aria-hidden="true"></div>
         <div class="act__inner">
           <div class="act__copy">
-            <span class="act__index" aria-hidden="true">03</span>
-            <h2 id="act-delegate-title" class="act__title" data-i18n="act.delegate.title"></h2>
-            <p class="act__lede" data-i18n="act.delegate.lede"></p>
+            <span class="act__index" aria-hidden="true">3</span>
+            <h2 id="act-chat-title" class="act__title" data-i18n="act.chat.title"></h2>
+            <p class="act__lede" data-i18n="act.chat.lede"></p>
             <dl class="act__facts">
-              <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.delegate.how"></dd></div>
-              <div class="act__fact"><dt data-i18n="act.label_get"></dt><dd data-i18n="act.delegate.get"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_how"></dt><dd data-i18n="act.chat.how"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_get"></dt><dd data-i18n="act.chat.get"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_progress"></dt><dd data-i18n="act.chat.progress"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_results"></dt><dd data-i18n="act.chat.results"></dd></div>
+              <div class="act__fact"><dt data-i18n="act.label_works"></dt><dd data-i18n="act.chat.works"></dd></div>
             </dl>
           </div>
           <figure class="act__visual">
             <div class="mock mock--browser">
               <div class="mock__bar">
                 <span class="mock__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span class="mock__url" data-i18n="act.delegate.mock_title"></span>
+                <span class="mock__url" data-i18n="act.chat.mock_title"></span>
               </div>
               <div class="mock__chat" aria-hidden="true">
                 <p class="chat chat--you"><span class="chat__who">you</span><span>Add a dark / light theme switcher</span></p>
-                <p class="chat chat--bot"><span class="chat__who">agent</span><span>reading components…</span></p>
-                <p class="chat chat--bot"><span class="chat__who">agent</span><span>editing Header.tsx · theme.ts</span></p>
-                <p class="chat chat--bot"><span class="chat__who">agent</span><span>verified on live preview</span></p>
-                <p class="chat chat--done"><span class="chat__who chat__tick">✓</span><span>opened PR #128</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>linking playground…</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>editing Header.tsx · theme.ts</span></p>
+                <p class="chat chat--bot"><span class="chat__who">genie</span><span>verified on live playground (<code>alice</code>)</span></p>
+                <p class="chat chat--done"><span class="chat__who chat__tick">✓</span><span>opened PR #2402</span></p>
               </div>
             </div>
           </figure>
         </div>
-      </section>
 
-      <!-- Payoff -->
-      <section class="payoff" aria-label="The outcome">
-        <p class="payoff__text" data-i18n="flow.payoff"></p>
-      </section>
-
-      <!-- ── CTA card ───────────────────────────────────────────── -->
-      <section class="contact" aria-labelledby="contact-title">
-        <div class="contact__card">
-          <div class="contact__glow" aria-hidden="true"></div>
-          <h2 id="contact-title" class="contact__title" data-i18n="contact.title"></h2>
-          <p class="contact__lede" data-i18n="contact.lede"></p>
-          <div class="contact__actions">
-            <a class="btn btn--primary" href="https://fibe.gg/" rel="noopener">
-              <span data-i18n="contact.primary_label"></span>
-            </a>
-            <a class="btn btn--ghost" href="https://github.com/fibegg" target="_blank" rel="noopener noreferrer">
-              <span data-i18n="contact.secondary_label"></span>
-            </a>
+        <!-- ── CTA card ─────────────────────────────────────────── -->
+        <section class="contact" aria-labelledby="contact-title">
+          <div class="contact__card">
+            <div class="contact__glow" aria-hidden="true"></div>
+            <h2 id="contact-title" class="contact__title" data-i18n="contact.title"></h2>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="https://fibe.gg/" rel="noopener">
+                <span data-i18n="contact.primary_label"></span>
+              </a>
+              <a class="btn btn--ghost" href="https://faq.fibe.gg" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="contact.secondary_label"></span>
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
     </main>
 
