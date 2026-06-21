@@ -5,7 +5,7 @@
 //
 // What it does:
 //   1. Spawns `python3 -m http.server <PORT>` in the project root.
-//   2. Runs an initial `build-locales` so /index.html + /uk/index.html exist.
+//   2. Runs an initial `build-locales` so /index.html exists.
 //   3. Watches the source files:
 //        - template.html        ← triggers rebuild + reload
 //        - assets/i18n.json     ← triggers rebuild + reload
@@ -39,7 +39,6 @@ server.on("error", (err) => {
   process.exit(1);
 });
 console.log(`▶ http://localhost:${PORT}`);
-console.log(`  (uk: http://localhost:${PORT}/uk/)`);
 
 // ─── 2. Build runner (with in-flight coalescing) ──────────────────────────
 let inflight = null;
@@ -132,7 +131,6 @@ const SOURCES = [
   { dir: path.join(ROOT, "assets"), file: "i18n.json", rebuild: true  },
   { dir: path.join(ROOT, "assets"), file: "script.js", rebuild: false },
   { dir: path.join(ROOT, "assets"), file: "style.css", rebuild: false },
-  { dir: path.join(ROOT, "assets", "faq"), file: "en.md", rebuild: true },
 ];
 
 const pendingFiles = new Set();
